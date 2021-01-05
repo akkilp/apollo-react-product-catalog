@@ -17,7 +17,7 @@ class ProductAPI extends RESTDataSource {
       }
   }
 
-  async getAllByCategory(category) {
+  async getAllByCategory({category}) {
     const response = await this.get(category);
     return Array.isArray(response)
       ? response.map(product => this.productReducer(product))

@@ -13,8 +13,9 @@ class ManufacturerAPI extends RESTDataSource {
       }
   }
 
-  async getAllByManufacturer(manufacturer) {
-    const response = await this.get(manufacturer);
+  async getAllByManufacturer({manufacturer}) {
+    console.log(manufacturer)
+    const response = await this.get('hennex');
     return Array.isArray(response)
       ? response.map(item => this.availabilityReducer(item))
       : [];

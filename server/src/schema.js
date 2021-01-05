@@ -3,7 +3,7 @@ import { gql } from 'apollo-server';
 const typeDefs = gql`
     type Query{
         productsInCategory(category: String!): [ProductAPIResponse!]
-        productsByManyfacturer(manufacturer: String!): [ManufacturerAPIResponse!]
+        productsByManufacturer(manufacturer: String!): [ManufacturerAPIResponse!]
     }
 
     type ManufacturerAPIResponse {
